@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="path_kartu_member" class="col-lg-2 control-label">Kartu Member</label>
+                        <label for="path_kartu_member" class="col-lg-2 control-label">Kartu Customer</label>
                         <div class="col-lg-4">
                             <input type="file" name="path_kartu_member" class="form-control" id="path_kartu_member"
                                 onchange="preview('.tampil-kartu-member', this.files[0], 300)">
@@ -128,7 +128,7 @@
                 $('[name=diskon]').val(response.diskon);
                 $('[name=tipe_nota]').val(response.tipe_nota);
                 $('title').text(response.nama_perusahaan + ' | Pengaturan');
-                
+
                 let words = response.nama_perusahaan.split(' ');
                 let word  = '';
                 words.forEach(w => {

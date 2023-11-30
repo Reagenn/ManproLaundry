@@ -32,7 +32,7 @@
                             <th>Kode</th>
                             <th>Nama</th>
                             <th>Kategori</th>
-                            <th>Merk</th>
+                            <th>Berat per Kg</th>
                             <th>Harga Beli</th>
                             <th>Harga Jual</th>
                             <th>Diskon</th>

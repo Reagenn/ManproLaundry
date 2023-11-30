@@ -16,16 +16,20 @@ class PageController extends Controller
 
     public function system()
     {
-        return view('pages.system');
+        return view('pages/system');
+    }
+    public function paket()
+    {
+        return view('pages/paket');
     }
 
     public function testimonials()
     {
-        return view('pages.testimonials');
+        return view('pages/testimonials');
     }
 
     public function contact()
     {
-        return view('pages.contact');
+        return view('pages/contact');
     }
 }

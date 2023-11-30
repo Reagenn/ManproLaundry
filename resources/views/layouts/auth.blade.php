@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Halaman Login</title>
+    <title>Ajeng Laundry | Login</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -31,7 +31,7 @@
 
     <style>
         body.login-page {
-            background-image: url('{{ asset('AdminLTE-2/dist/img/anim.jpg') }}');
+            background-image: url('{{ asset('img/wall.png') }}');
             background-repeat: no-repeat;
             background-size: cover;
         }

@@ -15,6 +15,7 @@ use App\Http\Controllers\{
     SupplierController,
     UserController,
     PageController,
+    OrderController,
 };
 use Illuminate\Support\Facades\Route;
 
@@ -33,11 +34,17 @@ use Illuminate\Support\Facades\Route;
 //     return redirect()->route('login');
 // });
 
-Route::get('/', [PageController::class, 'home']);
-Route::get('/about', [PageController::class, 'about']);
-Route::get('/system', [PageController::class, 'system']);
-Route::get('/testimonials', [PageController::class, 'testimonials']);
-Route::get('/contact', [PageController::class, 'contact']);
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/system', [PageController::class, 'system'])->name('system');
+Route::get('/paket', [PageController::class, 'paket'])->name('paket');
+Route::get('/service', [OrderController::class, 'service'])->name('service');
+Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+Route::get('/invoice/{id}', [OrderController::class, 'invoice'])->name('invoice');
+Route::get('/testimonials', [PageController::class, 'testimonials'])->name('testimonials');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+
+
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

@@ -1,0 +1,103 @@
+// ======== Global Settings
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+// ========= Variables
+$bg-black-100: rgba(31, 31, 31, 0.9);
+$bg-white-100: #ddd;
+$bg-white-50: #eff0f4;
+$bg-white-25: #f5f5f5;
+$bg-white-10: #f5f5f5;
+$text-black-900: #000;
+$text-black-700: rgb(37,37,37);
+$text-black-600: rgb(172,172,172);
+$text-black-400: rgb(221,221,221);
+$text-black-300: #f5f5f5;
+$shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+// ========== Box
+body{
+    font-size: 10px;
+    line-height: 1.5;
+}
+:before, :after{
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.titleText, h2{
+    color: $text-black-900;
+    font-size: 2em;
+    font-weight: 300;
+
+    span{
+        color: $text-black-700;
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+}
+.title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// ========= Button Bar
+// ========= Navigation Bar
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+
+    .Logo{
+        color: $text-black-700;
+        font-weight: 700;
+        font-size: 2em;
+        text-decoration: none;
+    }
+    .nav{
+        position: relative;
+        display: flex;
+
+        li{
+            margin: 0 0 0 30px;
+            a{
+                color: $text-black-900;
+                font-weight: 300;
+            }
+        }
+    }
+}
+// ========= Landing Page
+// ========= About
+// ========= System
+// ========= Testimonials
+// ========= Contact
+// ========= Copyright
+// ========= Media Queries
