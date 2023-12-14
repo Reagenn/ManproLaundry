@@ -31,7 +31,7 @@
 
     <style>
         body.login-page {
-            background-image: url('{{ asset('img/wall.png') }}');
+            background-image: url('{{ asset('img/loginpage.png') }}');
             background-repeat: no-repeat;
             background-size: cover;
         }

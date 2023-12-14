@@ -10,7 +10,7 @@
     <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/png">
     <style>
         body {
-            background-image: url('{{ asset('img/back.jpeg') }}');
+            background-image: url('{{ asset('img/gmb.png') }}');
             background-size: cover;
             font-family: Arial, sans-serif;
             color: #333;
@@ -39,15 +39,23 @@
         }
     </style>
 </head>
-<body style="background-image: url('{{ asset('img/back.jpeg') }}'); background-size: cover;">
+<body style="background-image: url('{{ asset('img/gmb.png') }}'); background-size: cover;">
     <div class="container">
-        <h1 class="my-3" style="color: white; font-family: 'Grandstander', sans-serif;">INVOICE</h1>
-        <a href="{{ route('home') }}" class="btn btn-secondary mb-3">&times; Beranda</a>
+        <h1 class="my-3" style="color: #21B7E2; font-family: 'Grandstander', sans-serif;">INVOICE</h1>
+        <a href="{{ route('home') }}" class="btn btn-secondary mb-3" style="background-color: #1678F3;">&times; Beranda</a>
         <div class="card" style="width: 28rem;">
             <div class="card-body">
                 <h5 class="card-title" style="margin-bottom: 10px; font-size: 30px">Detail Pesanan</h5>
                 <hr style="border-top: 1px solid #000;">
                 <table>
+                    <tr>
+                        <td>Paket Laundry</td>
+                        <td> : {{ $order->paket }}</td>
+                    </tr>
+                    <tr>
+                        <td>No Order</td>
+                        <td> : {{ $order->id }}</td>
+                    </tr>
                     <tr>
                         <td>Nama</td>
                         <td>: {{ $order->name }}</td>

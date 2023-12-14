@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img class="object-cover object-center rounded" alt="hero" src="{{ asset('img/frame.png') }}">
+        <img class="object-cover object-center rounded" alt="hero" src="{{ asset('img/fl.png') }}">
       </div>
     </div>
 </section>

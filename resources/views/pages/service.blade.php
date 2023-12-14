@@ -9,31 +9,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/png">
 </head>
-<body style="background-image: url('{{ asset('img/back.jpeg') }}'); background-size: cover;">
+<body style="background-image: url('{{ asset('img/gmb.png') }}'); background-size: cover;">
     <div class="container">
-        <h1 class="my-3" style="color: white; font-family: 'Grandstander', sans-serif;">Servis Ajeng Laundry</h1><a href="{{ route('home') }}" class="btn btn-secondary mb-3">&times; Beranda</a>
+        <h1 class="my-3" style="color: #000; font-family: 'Grandstander', sans-serif;">Servis Ajeng Laundry</h1><a href="{{ route('home') }}" class="btn btn-secondary mb-3" style="background-color: #1678F3;">&times; Beranda</a>
         <div class="card" style="width: 28rem;">
-            <img src="{{ asset('img/lk.png') }}" class="card-img-top" alt="...">
+            <img src="{{ asset('img/lk1.png') }}" class="card-img-top" alt="...">
             <div class="card-body" >
               <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #000;">Laundry Kiloan</h5>
-              <p class="card-text" style="font-family: 'Poppins', sans-serif; font-size: 17px;">Untuk harga paket laundry kiloan per 1kg = Rp7000</p>
+              <p class="card-text" style="font-family: 'Poppins', sans-serif; font-size: 17px;"></p>
               <form action="/checkout" method="POST" >
                 @csrf
+                <div class="col-lg-6 col-lg-offset-3 mb-3">
+                    <label for="paket">Pilih Paket Laundry</label>
+                    <select name="paket" id="paket" class="form-control" required>
+                        <option value="">- Pilih -</option>
+                        <option value="paketdasar">Paket Dasar Rp4.000</option>
+                        <option value="paketstandar">Paket Standar Rp7.000</option>
+                        <option value="paketpremium">Paket Premium Rp10.000</option>
+                        <option value="paketsuper">Paket Super Rp15.000</option>
+                    </select>
+                </div>
                 <div class="mb-3">
-                    <label for="qty" class="form-label">Berat Per KG</label>
-                    <input type="number" name="qty" class="form-control" id="qty" placeholder="masukkan berat laundry anda">
+                    <label for="qty" class="form-label">Berat Per kg</label>
+                    <input type="number" step="0.1" name="qty" class="form-control" id="qty" placeholder="masukkan berat laundry anda" required>
                  </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Nama Pelanggan</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="masukkan nama anda">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="masukkan nama anda" required>
                  </div>
                 <div class="mb-3">
                     <label for="phone" class="form-label">No Telp</label>
-                    <input type="text" name="phone" class="form-control" id="phone" placeholder="masukkan no hp anda">
+                    <input type="text" name="phone" class="form-control" id="phone" placeholder="masukkan no hp anda" required>
                  </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Alamat</label>
-                    <textarea name="address" class="form-control" id="address" rows="3" placeholder="masukkan alamat anda dengan benar!"></textarea>
+                    <textarea name="address" class="form-control" id="address" rows="3" placeholder="masukkan alamat lengkap anda" required></textarea>
                 </div>
 
                   <button type="submit" class="btn btn-primary">Checkout</button>

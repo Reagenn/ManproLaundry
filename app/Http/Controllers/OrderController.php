@@ -14,8 +14,27 @@ class OrderController extends Controller
     }
     public function checkout(Request $request)
     {
-        $request->request->add(['total_price' => $request->qty * 7000, 'status' => 'Unpaid']);
-        $order = Order::create($request->all());
+        $harga = [
+            'paketdasar' => 4000,
+            'paketstandar' => 7000,
+            'paketpremium' => 10000,
+            'paketsuper' => 15000,
+        ];
+
+        $selectedPackage = $request->paket;
+        $total_price = $harga[$selectedPackage] * $request->qty;
+
+        $requestData = [
+            'paket' => $selectedPackage,
+            'qty' => $request->qty,
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'total_price' => $total_price,
+            'status' => 'Unpaid',
+        ];
+
+        $order = Order::create($requestData);
 
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = config('midtrans.server_key');
