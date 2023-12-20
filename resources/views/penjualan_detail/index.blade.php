@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="kode_member" class="col-lg-2 control-label">Customer</label>
+                                <label for="kode_member" class="col-lg-2 control-label">Member</label>
                                 <div class="col-lg-8">
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="kode_member" value="{{ $memberSelected->kode_member }}">

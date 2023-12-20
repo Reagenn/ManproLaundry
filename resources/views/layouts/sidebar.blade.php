@@ -41,7 +41,12 @@
             </li>
             <li>
                 <a href="{{ route('pelanggan.index') }}">
-                    <i class="fa fa-id-card"></i> <span>Customer</span>
+                    <i class="fa fa-users"></i> <span>Customer</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('contact.index') }}">
+                    <i class="fa fa-comments"></i> <span>Ulasan</span>
                 </a>
             </li>
             <li>

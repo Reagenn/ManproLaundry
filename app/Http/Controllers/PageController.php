@@ -28,7 +28,7 @@ class PageController extends Controller
         return view('pages/testimonials');
     }
 
-    public function contact()
+    public function contacts()
     {
         return view('pages/contact');
     }

@@ -1,7 +1,7 @@
 @extends('layouts.homelayouts')
 
 @section('konten')
-<section class="text-gray-900 body-font overflow-hidden" style="background-image: url('{{ asset('img/gmb.png') }}'); background-size: cover;" >
+<section class="text-gray-900 body-font overflow-hidden" style="background-image: url('{{ asset('img/upsys.jpg') }}'); background-size: cover;" >
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900" style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #000;">Pilihan Paket Kami</h1>

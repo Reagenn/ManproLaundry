@@ -8,10 +8,31 @@
     <title>Ajeng Laundry | Service</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/png">
+    <style>
+        body {
+            background-image: url('{{ asset('img/gmb.png') }}');
+            background-size: cover;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .custom-home-link {
+            position: absolute;
+            top: 30px; /* Adjust the value to move it slightly down */
+            right: 20px; /* Adjust the value to move it slightly from the right */
+            /* Other custom styles can be added here */
+        }
+    </style>
 </head>
 <body style="background-image: url('{{ asset('img/gmb.png') }}'); background-size: cover;">
     <div class="container">
-        <h1 class="my-3" style="color: #000; font-family: 'Grandstander', sans-serif;">Servis Ajeng Laundry</h1><a href="{{ route('home') }}" class="btn btn-secondary mb-3" style="background-color: #1678F3;">&times; Beranda</a>
+        <a href="{{ route('home') }}" class="btn btn-secondary mb-3 custom-home-link" style="background-color: #1678F3;">&times; Beranda</a>
+        <h1 class="my-3" style="color: #000; font-family: 'Grandstander', sans-serif;">Servis Ajeng Laundry</h1>
         <div class="card" style="width: 28rem;">
             <img src="{{ asset('img/lk1.png') }}" class="card-img-top" alt="...">
             <div class="card-body" >

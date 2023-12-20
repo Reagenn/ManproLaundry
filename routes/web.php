@@ -17,6 +17,7 @@ use App\Http\Controllers\{
     PageController,
     OrderController,
     PelangganController,
+    ContactController,
 };
 use Illuminate\Support\Facades\Route;
 
@@ -43,7 +44,9 @@ Route::get('/service', [OrderController::class, 'service'])->name('service');
 Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
 Route::get('/invoice/{id}', [OrderController::class, 'invoice'])->name('invoice');
 Route::get('/testimonials', [PageController::class, 'testimonials'])->name('testimonials');
-Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
+// Route::post('/submit-contact', [ContactController::class, 'submitContact'])->name('submit_contact');
+Route::post('/submit-contact', [ContactController::class, 'submitContact'])->name('submit_contact');
 
 
 
@@ -68,6 +71,22 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('/pelanggan', PelangganController::class);
         Route::delete('/pelanggan/{id}', [PelangganController::class, 'destroy'])->name('pelanggan.destroy');
 
+        // Route::get('/reviews/data', [ReviewController::class, 'data'])->name('reviews.data');
+        // Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
+        // Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+        // Route::put('/reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
+        // Route::delete('/reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+
+        // Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+        // Route::post('/contact/submit', [ContactController::class, 'submitContact'])->name('contact.submit');
+        // Route::get('/contact/data', [ContactController::class, 'data'])->name('contact.data');
+        // Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
+        // Route::delete('/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
+
+        Route::get('/contact/data', [ContactController::class, 'data'])->name('contact.data');
+        Route::post('/contact/submit', [ContactController::class, 'submitContact'])->name('contact.submit');
+        Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+        Route::delete('/contact/{id}', [ContactController::class, 'destroy'])->name('contact.delete');
 
         Route::get('/supplier/data', [SupplierController::class, 'data'])->name('supplier.data');
         Route::resource('/supplier', SupplierController::class);

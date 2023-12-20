@@ -11,7 +11,7 @@
             <a href="{{ route('paket') }}" class="mr-5 hover:text-gray-900">Paket</a>
             <a href="{{ route('service') }}" class="mr-5 hover:text-gray-900">Service</a>
             {{-- <a href="{{ route('testimonials') }}" class="mr-5 hover:text-gray-900">Testimoni</a> --}}
-            <a href="{{ route('contact') }}" class="mr-5 hover:text-gray-900">Kontak Kami</a>
+            <a href="{{ route('contacts') }}" class="mr-5 hover:text-gray-900">Kontak Kami</a>
         </nav>
         <button class="inline-flex text-white items-center bg-blue-500 border-0 py-1 px-3 focus:outline-none hover:bg-red-500 rounded text-base mt-4 md:mt-0 text-black" style="font-family: 'Inter Regular', sans-serif; font-size: 17px;">
             <a href="{{ route('login') }}">Masuk</a>
